@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>482</width>
+    <height>368</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>461</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="expa">
+         <property name="maximum">
+          <number>355000</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Имя персонажа:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="player_name"/>
+       </item>
+       <item row="8" column="1">
+        <widget class="QComboBox" name="stat">
+         <item>
+          <property name="text">
+           <string>4d6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Лесенка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Задать</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Мировоззрение:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Класс:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="player_history">
+         <item>
+          <property name="text">
+           <string>Не важно</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Артист</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Беспризорник</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Благородный</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Гильдейский ремесленник</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Моряк</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Мудрец</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Народный герой</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Отшельник</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Преступник</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Прислужник</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Солдат</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Чужеземец</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Шарлатан</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Предыстория:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Имя игрока:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Характеристики:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="worldview">
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="tabletTracking">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Не важно</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Законно-доброе</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Нейтрально-доброе</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Хаотично-доброе</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Законно-нейтральное</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Нейтральное</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Хаотично-нейтральное</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Законно-злое</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Нейтрально-злое</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Хаотично-злое</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="character_name"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Уровень:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Опыт:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="clas">
+         <property name="currentText">
+          <string>Не важно</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Не важно</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Варвар</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Бард</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Жрец</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Друид</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Воин</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Монах</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Паладин</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Следопыт</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Плут</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Чародей</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Колдун</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Волшебник</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Раса:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="race">
+         <property name="currentText">
+          <string>Не важно</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Не важно</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Горный дварф</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Холмовой дварф</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Высший эльф</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Лесной эльф</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Дроу</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Коренастый полурослик</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Легконогий полурослик</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Человек</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Драконорождённый</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Лесной гном</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Каменный гном</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Полуэльф</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Полуорк</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Тифлинг</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QSpinBox" name="level">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="generation">
+       <property name="text">
+        <string>Создать</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>482</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
