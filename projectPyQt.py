@@ -35,6 +35,16 @@ class MainWindow(QMainWindow):
                             265000, 305000, 355000]
         self.player_name.setStyleSheet("QLineEdit {background-color: rgba(205, 133, 63, 0.75)}")
         self.character_name.setStyleSheet("QLineEdit {background-color: rgba(205, 133, 63, 0.75)}")
+        self.lestyle = """QLineEdit QAbstractItemView {
+                                border: 1px solid rgba(205, 133, 63, 0.75);
+                                background: rgba(205, 133, 63, 0.75);
+                                selection-background-color: black;
+                                color: #500000;
+                                }
+                                QLineEdit {
+                                background: rgba(205, 133, 63, 0.75);
+                                color: #500000;
+                                }"""
         self.cbstyle = """QComboBox QAbstractItemView {
                         border: 1px solid rgba(205, 133, 63, 0.75);
                         background: rgba(205, 133, 63, 0.75);
@@ -55,6 +65,8 @@ class MainWindow(QMainWindow):
                         background: rgba(205, 133, 63, 0.75);
                         color: #500000;
                         }"""
+        self.character_name.setStyleSheet(self.lestyle)
+        self.player_name.setStyleSheet(self.lestyle)
         self.race.setStyleSheet(self.cbstyle)
         self.clas.setStyleSheet(self.cbstyle)
         self.player_history.setStyleSheet(self.cbstyle)
