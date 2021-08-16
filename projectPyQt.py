@@ -19,7 +19,7 @@ class Hero:
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
+        uic.loadUi('static/ui/main.ui', self)
         self.setWindowTitle('Генератор DnD персонажей')
         # Открытия окна для определение пользователем характеристик
         self.stat.activated[str].connect(self.characteristics)
@@ -118,7 +118,7 @@ class MainWindow(QMainWindow):
         con.close()
 
     def make_player_list(self, cur):
-        im = Image.open('player_list.png')
+        im = Image.open('static/img/player_list.png')
         idraw = ImageDraw.Draw(im)
         text_type = 'arial.ttf'
         font = []
@@ -134,7 +134,7 @@ class MainWindow(QMainWindow):
         self.write_inventar(idraw, font, cur)
         self.write_vladenia(idraw, font)
         self.write_umenia(idraw, font)
-        im.save(hero.hero_name + '_' + hero.hero_class + '.png')
+        im.save('player_lists/' + hero.hero_name + '_' + hero.hero_class + '.png')
         im.show()
 
     def write_umenia(self, idraw, font):
@@ -647,7 +647,7 @@ class MainWindow(QMainWindow):
 class Stats(QMainWindow):
     def __init__(stats_self):
         super().__init__()
-        uic.loadUi('chose_characteristics.ui', stats_self)
+        uic.loadUi('static/ui/chose_characteristics.ui', stats_self)
         stats_self.setWindowTitle('Характеристики')
         stats_self.mod = [stats_self.silamod, stats_self.lovkostmod,
                           stats_self.telomod, stats_self.intelmod,
