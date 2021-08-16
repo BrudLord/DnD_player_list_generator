@@ -33,6 +33,35 @@ class MainWindow(QMainWindow):
                             64000, 85000, 100000, 120000,
                             140000, 165000, 195000, 225000,
                             265000, 305000, 355000]
+        self.player_name.setStyleSheet("QLineEdit {background-color: rgba(205, 133, 63, 0.75)}")
+        self.character_name.setStyleSheet("QLineEdit {background-color: rgba(205, 133, 63, 0.75)}")
+        self.cbstyle = """QComboBox QAbstractItemView {
+                        border: 1px solid rgba(205, 133, 63, 0.75);
+                        background: rgba(205, 133, 63, 0.75);
+                        selection-background-color: black;
+                        color: #500000;
+                        }
+                        QComboBox {
+                        background: rgba(205, 133, 63, 0.75);
+                        color: #500000;
+                        }"""
+        self.sbstyle = """QSpinBox QAbstractItemView {
+                        border: 1px solid rgba(205, 133, 63, 0.75);
+                        background: rgba(205, 133, 63, 0.75);
+                        selection-background-color: black;
+                        color: #500000;
+                        }
+                        QSpinBox {
+                        background: rgba(205, 133, 63, 0.75);
+                        color: #500000;
+                        }"""
+        self.race.setStyleSheet(self.cbstyle)
+        self.clas.setStyleSheet(self.cbstyle)
+        self.player_history.setStyleSheet(self.cbstyle)
+        self.worldview.setStyleSheet(self.cbstyle)
+        self.expa.setStyleSheet(self.sbstyle)
+        self.level.setStyleSheet(self.sbstyle)
+        self.stat.setStyleSheet(self.cbstyle)
 
     def update(self):
         # Функция связывающая уровень героя и его опыт
@@ -631,6 +660,22 @@ class Stats(QMainWindow):
         stats_self.intel.valueChanged.connect(stats_self.update)
         stats_self.mudrost.valueChanged.connect(stats_self.update)
         stats_self.harizma.valueChanged.connect(stats_self.update)
+        sbstyle = """QSpinBox QAbstractItemView {
+                        border: 1px solid rgba(205, 133, 63, 0.75);
+                        background: rgba(205, 133, 63, 0.75);
+                        selection-background-color: black;
+                        color: #500000;
+                        }
+                        QSpinBox {
+                        background: rgba(205, 133, 63, 0.75);
+                        color: #500000;
+                        }"""
+        stats_self.sila.setStyleSheet(sbstyle)
+        stats_self.lovkost.setStyleSheet(sbstyle)
+        stats_self.telo.setStyleSheet(sbstyle)
+        stats_self.intel.setStyleSheet(sbstyle)
+        stats_self.mudrost.setStyleSheet(sbstyle)
+        stats_self.harizma.setStyleSheet(sbstyle)
 
     def update(stats_self):
         # Нахождение объекта, который отвечает за отовражение модификатора изменённой характеристики
@@ -662,6 +707,7 @@ class Stats(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setStyle('Windows')
     ex = MainWindow()
     st = Stats()
     hero = Hero()
